@@ -1,4 +1,4 @@
-#CentOS Installation#
+# CentOS Installation #<br/>
 Insert CentOS operating System in the DVD-Drive.<br />
 Select Test Drive and Install the Operating System.<br />
 Select the drive in harddisk and click start install.<br />
