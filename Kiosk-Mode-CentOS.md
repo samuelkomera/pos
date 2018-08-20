@@ -9,7 +9,7 @@
 4. Setup Auto Login. Now we can setup the auto login process. We need the user Kiosk to auto login on every reboot.
    * /etc/gdm/custom.conf
        
-      # Enable automatic login for user
-      ~~~~~ [daemon]
+      ~~~~~ # Enable automatic login for user
+      [daemon]
       AutomaticLogin=username
-      AutomaticLoginEnable=True ~~~~~
+      AutomaticLoginEnable=True 
