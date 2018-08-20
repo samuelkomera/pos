@@ -7,7 +7,7 @@
    * kiosk ALL=(ALL) NOPASSWD: ALL
    * pos ALL=(ALL) NOPASSWD: ALL
 4. Setup Auto Login. Now we can setup the auto login process. We need the user Kiosk to auto login on every reboot.
-   * edit the following lines to the file <mark> /etc/gdm/custom.conf <mark>
+   * edit the following lines to the file <mark> /etc/gdm/custom.conf <mark><span style="background-color: #FFFF00">Marked text</span>
       ~~~~~ 
       # Enable automatic login for user
       [daemon]
