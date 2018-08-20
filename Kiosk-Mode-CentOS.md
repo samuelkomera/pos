@@ -19,4 +19,4 @@
     
 5. * Chrome asks for password to unlock keyring on startup
    * google-chrome --password-store=basic
-6. Disable the user list on lock screen : [UserList Diabling](https://help.gnome.org/admin/system-admin-guide/stable/login-        userlist-disable.html.en)
+6. Disable the user list on lock screen : [UserList Diabling](https://help.gnome.org/admin/system-admin-guide/stable/login-    userlist-disable.html.en)
