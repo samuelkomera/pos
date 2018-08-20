@@ -16,3 +16,6 @@
       AutomaticLoginEnable=True 
     ~~~~~    
     Reference [AutoLogin](https://wiki.archlinux.org/index.php/GDM)
+    
+5. * Chrome asks for password to unlock keyring on startup
+   * google-chrome --password-store=basic
