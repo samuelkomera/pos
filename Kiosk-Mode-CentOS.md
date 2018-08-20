@@ -1,4 +1,3 @@
 # Kiosk Mode - CentOS
-* Create a User
- *adduser kiosk
- 
+
+... sudo apt-get update && sudo apt-get upgrade
