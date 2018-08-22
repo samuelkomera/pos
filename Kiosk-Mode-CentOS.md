@@ -16,6 +16,7 @@
       AutomaticLoginEnable=True 
     ~~~~~    
     Reference [AutoLogin](https://wiki.archlinux.org/index.php/GDM)
+    http://mazzakolinux.com/login-to-centos-7-without-login-prompt/
     
 5. * Chrome asks for password to unlock keyring on startup
    * google-chrome --password-store=basic
