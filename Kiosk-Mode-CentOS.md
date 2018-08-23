@@ -31,4 +31,6 @@
    
 8. Automatic Network On 
         * cd /etc/sysconfig/network-scripts/ [Reference](https://wiki.centos.org/FAQ/CentOS7) 
+        
+9. Key ring for automatic login [Reference](https://askubuntu.com/questions/31786/chrome-asks-for-password-to-unlock-keyring-on-startup)
      
