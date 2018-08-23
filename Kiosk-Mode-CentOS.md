@@ -28,3 +28,7 @@
    * GSETTINGS_BACKEND=dconf gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type 'nothing'
    * Exit or Ctrl+D
    * systemctl restart gdm
+   
+8. Automatic Network On 
+        * cd /etc/sysconfig/network-scripts/ [Reference](https://wiki.centos.org/FAQ/CentOS7) 
+     
