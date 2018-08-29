@@ -26,6 +26,12 @@
 6. Set the default session for kiosk user by adding the following line to the /var/lib/AccountsService/users/kiosk              file.   
    ~~~~
      XSession=kiosk
+7. Define the kiosk session by writing a custom session definition, containing the following line:
+   ~~~~
+     RequiredComponents=kiosk-app;gnome-settings-daemon;kiosk-shell;
+8. Create a desktop file for kiosk-shell, __/usr/share/applications/kiosk-shell.desktop__, which will contain:
+   ~~~~
+     Exec=gnome-shell --mode=kiosk
 5. * Chrome asks for password to unlock keyring on startup
    * google-chrome --password-store=basic
 6. Disable the userlist on lock screen : [UserList Disabling](https://help.gnome.org/admin/system-admin-guide/stable/login-userlist-disable.html.en)
