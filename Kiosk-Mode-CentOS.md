@@ -23,7 +23,7 @@
 5. Create a session with a name matching your user name by writing a __/usr/share/xsessions/kiosk.desktop__ file and setting    the Exec line to be:
    ~~~~
      Exec=gnome-session --session kiosk
-6. Set the default session for kiosk user by adding the following line to the /var/lib/AccountsService/users/kiosk              file.   
+6. Set the default session for kiosk user by adding the following line to the __/var/lib/AccountsService/users/kiosk__              file.   
    ~~~~
      XSession=kiosk
 7. Define the kiosk session by writing a custom session definition, containing the following line:
