@@ -19,14 +19,14 @@
       AutomaticLogin=kiosk
       AutomaticLoginEnable=True
     ~~~~~ 
-    Reference [AutoLogin](https://wiki.archlinux.org/index.php/GDM)
-    
-5. Create a session with a name matching your user name by writing a /usr/share/xsessions/kiosk.desktop file and setting the Exec line to be:
+    Reference [AutoLogin](https://wiki.archlinux.org/index.php/GDM)    
+5. Create a session with a name matching your user name by writing a __/usr/share/xsessions/kiosk.desktop__ file and setting    the Exec line to be:
    ~~~~
-     cd /usr/share/xsessions
-     vi kiosk.desktop
      Exec=gnome-session --session kiosk
-    
+6. Set the default session for kiosk user by adding the following line to the /var/lib/AccountsService/users/kiosk              file.   
+   ~~~~
+     XSession=kiosk
+     
 5. * Chrome asks for password to unlock keyring on startup
    * google-chrome --password-store=basic
 6. Disable the userlist on lock screen : [UserList Disabling](https://help.gnome.org/admin/system-admin-guide/stable/login-userlist-disable.html.en)
