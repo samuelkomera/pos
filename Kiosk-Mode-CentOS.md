@@ -7,7 +7,7 @@
      sudo su -
      adduser kiosk
      passwd kiosk
-3. Add Users To sudoers I choose to add the 2 users to the sudoers file so I wouldn’t get prompted for passwords all the time.    Run visudo and at the bottom add
+3. Add Users To sudoers file so it wouldn’t get prompted for passwords all the time.Run visudo and at the bottom add
     ~~~
       kiosk ALL=(ALL) NOPASSWD: ALL
       pos ALL=(ALL) NOPASSWD: ALL
@@ -17,10 +17,16 @@
       # Enable automatic login for user
       [daemon]
       AutomaticLogin=kiosk
-      AutomaticLoginEnable=True 
-    ~~~~~    
+      AutomaticLoginEnable=True
+    ~~~~~ 
     Reference [AutoLogin](https://wiki.archlinux.org/index.php/GDM)
-    http://mazzakolinux.com/login-to-centos-7-without-login-prompt/
+    
+5. Create a session with a name matching your user name by writing a /usr/share/xsessions/kiosk.desktop file and setting the Exec line to be:
+   ~~~~
+     cd /usr/share/xsessions
+     vi kiosk.desktop
+  ~~~~~   
+     Exec=gnome-session --session kiosk
     
 5. * Chrome asks for password to unlock keyring on startup
    * google-chrome --password-store=basic
