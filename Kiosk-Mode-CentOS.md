@@ -25,7 +25,7 @@
    ~~~~
      cd /usr/share/xsessions
      vi kiosk.desktop
-  ~~~~~   
+   ~~~
      Exec=gnome-session --session kiosk
     
 5. * Chrome asks for password to unlock keyring on startup
