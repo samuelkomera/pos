@@ -7,6 +7,6 @@
    * System > Network & HostName > Turn ON Ethernet(enp3sO) ,Click Done.
 * Select Begin Installation.
 * In Configuration<br/>
-   * User Settings > Root Password(Set password to "SopTen20") , Click Done<br />
-   * User Settings > User Creation,(Set username : "pos" , password : "SopTen20"
+   * User Settings > Root Password (Set password to "SopTen20") , Click Done<br />
+   * User Settings > User Creation (Set username : "pos" , password : "SopTen20")
 
