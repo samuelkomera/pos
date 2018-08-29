@@ -1,4 +1,4 @@
-# Kiosk Mode - CentOS
+# Single Application Mode(SAM) - CentOS
 
 1. sudo apt-get update && sudo apt-get upgrade
 2. Create User Accounts
