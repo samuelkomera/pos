@@ -9,4 +9,6 @@
 * In Configuration<br/>
    * User Settings > Root Password (Set password to "SopTen20") , Click Done<br />
    * User Settings > User Creation (Set username : "pos" , password : "SopTen20")
+* After Installation, Click Rebot.
+* Accept the term and privacy policy and Click Finish.
 
