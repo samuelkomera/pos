@@ -16,8 +16,9 @@
       AutomaticLogin=kiosk
       AutomaticLoginEnable=True
     ~~~~~ 
-
-     Exec=gnome-shell --mode=kiosk
+5. Download and copy  __pa__ to __/opt/np/__
+6. Download and copy  __rf14-0-1__ to __/opt/icr3rd/__
+7. 
 5. * Chrome asks for password to unlock keyring on startup
    * google-chrome --password-store=basic
 6. Disable the userlist on lock screen : [UserList Disabling](https://help.gnome.org/admin/system-admin-guide/stable/login-userlist-disable.html.en)
