@@ -28,7 +28,7 @@
    * yum install libnghttp2
    * yum install libpsl
    
-# systemctl start postgresql
+__systemctl start postgresql__
 8. Setup PA instance In POS user
    * cd /opt/np/pa/
    * install/setup.sh /opt/np/tools
