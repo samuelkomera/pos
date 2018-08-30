@@ -23,6 +23,10 @@
    * systemctl enable postgresql
    * sudo postgresql-setup initdb
    * systemctl start postgresql
+   * yum install epel-release
+   * yum install php-mcrypt
+   * yum install libnghttp2
+   * yum install libpsl
    
 # systemctl start postgresql
 8. Setup PA instance In POS user
