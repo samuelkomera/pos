@@ -33,7 +33,9 @@
    * Create a folder __/netpos/icr3rd__ in __opt__ directory.
    * change the owner and group of __np__ and __icr3rd__ folder. Run following commands. 
      ~~~
+     cd /opt/
      sudo chown pos:netpos np
+     cd /netpos/
      sudo chown pos:netpos icr3rd
    * Download and copy  __pa__ to __/opt/np/__
    * Download and copy  __rf14-0-1__ to __/opt/netpos/icr3rd/__
