@@ -87,7 +87,7 @@
 
         [Install]
         WantedBy=multi-user.target
-     * Start the service and  Enable it to run at boot:
+     * Start the service and  enable it to run at boot:
         ~~~~~
         sudo systemctl start myfirst
         sudo systemctl enable myfirst        
