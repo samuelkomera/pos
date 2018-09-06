@@ -1,4 +1,4 @@
-# Single Application Mode(SAM) - CentOS
+# First Plum Device(FPD)
 
 1. sudo yum update && sudo yum upgrade
 2. Create User Accounts
