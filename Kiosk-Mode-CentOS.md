@@ -69,13 +69,13 @@
      * vi paCentral.json                (set password)
      * bin/paCentralSetup.php -j paCentral.json <br>
 
-   __run pa instance that automatically runs with a script using systemd__
+   __run pa instance that automatically runs at boot with a script using systemd__
      * As a __root user__ create __paservice.sh__ script in __/usr/local/sbin/__ with following lines
-         ~~~~
+        ~~~~
          #!/bin/sh
          sudo su - pos -c "cd /opt/np/pa/releases/pa1-0-0/;bin/pa.sh start > /dev/null 2>&1"
      * Make the __paservice.sh__ script executable
-         ~~~~
+        ~~~~
          sudo chmod +x paservice.sh
      * As a __root user__ create a service named __pa.service__ in __/etc/systemd/system/__ with the following lines
         ~~~~
@@ -87,7 +87,9 @@
 
         [Install]
         WantedBy=multi-user.target
-
-      
+     * Start the service and  Enable it to run at boot:
+        ~~~~~
+        sudo systemctl start myfirst
+        sudo systemctl enable myfirst        
 9. 
 
