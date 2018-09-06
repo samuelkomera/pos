@@ -3,13 +3,13 @@
 1. sudo yum update && sudo yum upgrade
 2. Create User Accounts
    * Create 2 users. One user is already created -- the account you’re logged in as. For this we’ll assume the account name        is pos. Create a second user named kiosk. This will become the auto-logged in user.<br>
-     As a __root user__ Run the following commands.
+     As a __root user__ run the following commands:
      ~~~
      adduser kiosk
      passwd kiosk
      ~~~  
    * Create a group named __netpos__,and the 2 users i.e,pos and kiosk to the netpos group.<br>
-     As a __root user__ Run the following commands.
+     As a __root user__ run the following commands:
      ~~~
      sudo groupadd netpos
      usermod -aG netpos pos
