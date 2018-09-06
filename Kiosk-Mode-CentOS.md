@@ -69,7 +69,9 @@
        ~~~~
        #!/bin/sh
        sudo su - pos -c "cd /opt/np/pa/releases/pa1-0-0/;bin/pa.sh start > /dev/null 2>&1"
-
+   * Make the __paservice.sh__ script executable
+       ~~~~
+       sudo chmod +x paservice.sh
    * As a __root user__ create a service named __pa.service__ in __/etc/systemd/system/__ with the following lines
       ~~~~
       [Unit]
