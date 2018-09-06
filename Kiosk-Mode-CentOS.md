@@ -30,7 +30,7 @@
    * yum install libnghttp2
    * yum install libpsl
    * systemctl start postgresql
-8. __Setup PA instance as POS user__
+8. Setup PA instance as __pos user__
    * cd /opt/np/pa/
    * install/setup.sh /opt/np/tools
    * The following steps are made by referring to pa/install/README.md
