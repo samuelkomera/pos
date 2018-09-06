@@ -10,6 +10,7 @@
 3. Add Users To sudoers file so it wouldn’t get prompted for passwords all the time.Run __visudo__ and at the bottom add
     ~~~
       pos ALL=(ALL) NOPASSWD: ALL
+      kiosk ALL=(ALL) NOPASSWD: ALL
 4. Setup Auto Login. Now we can setup the auto login process. We need the user Kiosk to auto login on every reboot. 
    * edit the following lines to the file __/etc/gdm/custom.conf__
     ~~~~~ 
@@ -23,15 +24,13 @@
 7. Install Postgres as root user
    * yum install postgresql.x86_64  postgresql-server postgresql-contrib  libnsl.x86_64
    * systemctl enable postgresql
-   * sudo postgresql-setup initdb
-   * systemctl start postgresql
+   * sudo postgresql-setup initdb 
    * yum install epel-release
    * yum install php-mcrypt
    * yum install libnghttp2
    * yum install libpsl
-   
-__systemctl start postgresql__
-8. Setup PA instance In POS user
+   * systemctl start postgresql
+8. __Setup PA instance as POS user__
    * cd /opt/np/pa/
    * install/setup.sh /opt/np/tools
    * The following steps are made by referring to pa/install/README.md
