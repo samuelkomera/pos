@@ -31,7 +31,7 @@
 5. __Create Folders and Copy pa project__
    * Create a folder __np__ in __opt__ directory.
    * Create a folder __/netpos/icr3rd__ in __opt__ directory.
-   * change the owner and group of __np__ and __icr3rd__ folder. Run following commands. 
+   * Change the owner and group of __np__ and __icr3rd__ folder. Run following commands. 
      ~~~
      cd /opt/
      sudo chown pos:netpos np
