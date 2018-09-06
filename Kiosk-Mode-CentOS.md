@@ -34,13 +34,12 @@ __systemctl start postgresql__
 8. Setup PA instance In POS user
    * cd /opt/np/pa/
    * install/setup.sh /opt/np/tools
-    The following steps are made by referring to pa/install/README.md
+   * The following steps are made by referring to pa/install/README.md
     __Create a static configuration.__
     bin/paSetupConf.sh 100 PTqCPtHEt8Y388aFxS3eiNpCZSIeLu9YDsCOVku5gOM 9101
     bin/paCreateDb.sh 9101
     __Create a software instance__
     cp install/pa.ini
-    (edit if necessary - in my case no need)
     install/mkpa.php
     __Setup txserver access__
     cd releases/pa1-0-0
