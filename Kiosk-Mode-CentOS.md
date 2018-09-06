@@ -2,12 +2,12 @@
 
 1. sudo yum update && sudo yum upgrade
 2. Create User Accounts
-   * Create 2 users. One user is already created -- the account you’re logged in as. For this we’ll assume the account name is pos. Create a second user named kiosk. This will become the auto-logged in user.
+   * Create 2 users. One user is already created -- the account you’re logged in as. For this we’ll assume the account name is pos. Create a second user named kiosk. This will become the auto-logged in user. Run the following commands
    ~~~
      sudo su -
      adduser kiosk
      passwd kiosk
-3. Add Users To sudoers file so it wouldn’t get prompted for passwords all the time.Run visudo and at the bottom add
+3. Add Users To sudoers file so it wouldn’t get prompted for passwords all the time.Run __visudo__ and at the bottom add
     ~~~
       pos ALL=(ALL) NOPASSWD: ALL
 4. Setup Auto Login. Now we can setup the auto login process. We need the user Kiosk to auto login on every reboot. 
