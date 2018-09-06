@@ -53,7 +53,7 @@
    * cd /opt/np/pa/
    * install/setup.sh /opt/np/tools
   
-    >The following steps are made by referring to pa/install/README.md.<br>
+   ** The following steps are made by referring to pa/install/README.md.<br>
     
    __Create a static configuration.__
      * bin/paSetupConf.sh 100 PTqCPtHEt8Y388aFxS3eiNpCZSIeLu9YDsCOVku5gOM 9101
