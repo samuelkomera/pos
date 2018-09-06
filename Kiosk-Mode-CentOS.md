@@ -98,7 +98,3 @@
         Type=Application
         Exec=/usr/bin/google-chrome --password-store=basic --kiosk https://localhost:9101
         Name=Google-Chrome
-
-        
-       
-
