@@ -42,20 +42,20 @@
 8. Setup PA instance as __pos user__
    * cd /opt/np/pa/
    * install/setup.sh /opt/np/tools
-   * The following steps are made by referring to pa/install/README.md
+   * The following steps are made by referring to pa/install/README.md.<br>
     __Create a static configuration.__
-    bin/paSetupConf.sh 100 PTqCPtHEt8Y388aFxS3eiNpCZSIeLu9YDsCOVku5gOM 9101
-    bin/paCreateDb.sh 9101
+   * bin/paSetupConf.sh 100 PTqCPtHEt8Y388aFxS3eiNpCZSIeLu9YDsCOVku5gOM 9101
+   * bin/paCreateDb.sh 9101 <br>
     __Create a software instance__
-    cp install/pa.ini
-    install/mkpa.php
+   * cp install/pa.ini
+   * install/mkpa.php <br>
     __Setup txserver access__
-    cd releases/pa1-0-0
-    cp ../../install/conf/paCentral.json .
-    vi paCentral.json                (set password)
-    bin/paCentralSetup.php -j paCentral.json
+   * cd releases/pa1-0-0
+   * cp ../../install/conf/paCentral.json .
+   * vi paCentral.json                (set password)
+   * bin/paCentralSetup.php -j paCentral.json <br>
     __run instance__
-    bin/pa.sh start
+   * bin/pa.sh start
     
 5. * Chrome asks for password to unlock keyring on startup
    * google-chrome --password-store=basic
