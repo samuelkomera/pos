@@ -52,40 +52,41 @@
 8. Setup PA instance as __pos user__
    * cd /opt/np/pa/
    * install/setup.sh /opt/np/tools
-   > The following steps are made by referring to pa/install/README.md.<br>
-   
- __Create a static configuration.__
-   * bin/paSetupConf.sh 100 PTqCPtHEt8Y388aFxS3eiNpCZSIeLu9YDsCOVku5gOM 9101
-   * bin/paCreateDb.sh 9101 <br>
-   
- __Create a software instance__
-   * cp install/pa.ini
-   * install/mkpa.php <br>
-   
- __Setup txserver access__
-   * cd releases/pa1-0-0
-   * cp ../../install/conf/paCentral.json .
-   * vi paCentral.json                (set password)
-   * bin/paCentralSetup.php -j paCentral.json <br>
-   
- __run pa instance that automatically runs with a script using systemd__
-   * As a __root user__ create __paservice.sh__ script in __/usr/local/sbin/__ with following lines
-       ~~~~
-       #!/bin/sh
-       sudo su - pos -c "cd /opt/np/pa/releases/pa1-0-0/;bin/pa.sh start > /dev/null 2>&1"
-   * Make the __paservice.sh__ script executable
-       ~~~~
-       sudo chmod +x paservice.sh
-   * As a __root user__ create a service named __pa.service__ in __/etc/systemd/system/__ with the following lines
-      ~~~~
-      [Unit]
-      Description=pa service
+  
+    >The following steps are made by referring to pa/install/README.md.<br>
+    
+   __Create a static configuration.__
+     * bin/paSetupConf.sh 100 PTqCPtHEt8Y388aFxS3eiNpCZSIeLu9YDsCOVku5gOM 9101
+     * bin/paCreateDb.sh 9101 <br>
 
-      [Service]
-      ExecStart=/usr/local/sbin/paservice.sh
+   __Create a software instance__
+     * cp install/pa.ini
+     * install/mkpa.php <br>
 
-      [Install]
-      WantedBy=multi-user.target
+   __Setup txserver access__
+     * cd releases/pa1-0-0
+     * cp ../../install/conf/paCentral.json .
+     * vi paCentral.json                (set password)
+     * bin/paCentralSetup.php -j paCentral.json <br>
+
+   __run pa instance that automatically runs with a script using systemd__
+     * As a __root user__ create __paservice.sh__ script in __/usr/local/sbin/__ with following lines
+         ~~~~
+         #!/bin/sh
+         sudo su - pos -c "cd /opt/np/pa/releases/pa1-0-0/;bin/pa.sh start > /dev/null 2>&1"
+     * Make the __paservice.sh__ script executable
+         ~~~~
+         sudo chmod +x paservice.sh
+     * As a __root user__ create a service named __pa.service__ in __/etc/systemd/system/__ with the following lines
+        ~~~~
+        [Unit]
+        Description=pa service
+
+        [Service]
+        ExecStart=/usr/local/sbin/paservice.sh
+
+        [Install]
+        WantedBy=multi-user.target
 
       
 9. 
