@@ -4,7 +4,9 @@
 2. Create User Accounts
    * Create 2 users. One user is already created -- the account you’re logged in as. For this we’ll assume the account name is pos. Create a second user named kiosk. This will become the auto-logged in user.
    ~~~
-     sudo yum install xguest
+     sudo su -
+     adduser kiosk
+     passwd kiosk
 3. Add Users To sudoers file so it wouldn’t get prompted for passwords all the time.Run visudo and at the bottom add
     ~~~
       pos ALL=(ALL) NOPASSWD: ALL
@@ -17,7 +19,7 @@
       AutomaticLoginEnable=True
     ~~~~~ 
 5. Download and copy  __pa__ to __/opt/np/__
-6. Download and copy  __rf14-0-1__ to __/opt/icr3rd/__
+6. Download and copy  __rf14-0-1__ to __/opt/netpos/icr3rd/__
 7. Install Postgres as root user
    * yum install postgresql.x86_64  postgresql-server postgresql-contrib  libnsl.x86_64
    * systemctl enable postgresql
@@ -54,6 +56,4 @@ __systemctl start postgresql__
 
 8. Automatic Network On 
         * cd /etc/sysconfig/network-scripts/ [Reference](https://wiki.centos.org/FAQ/CentOS7) 
-        
 
-     
