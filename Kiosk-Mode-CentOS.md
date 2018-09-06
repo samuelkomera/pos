@@ -28,7 +28,7 @@
       AutomaticLogin=kiosk
       AutomaticLoginEnable=True
     ~~~~~ 
-5. __Create Folders and Copy pa project__
+5. Create folders and copy pa project
    * Create a folder __np__ in __opt__ directory.
    * Create a folder __/netpos/icr3rd__ in __opt__ directory.
    * Change the owner and group of __np__ and __icr3rd__ folder. Run following commands. 
@@ -37,8 +37,9 @@
      sudo chown pos:netpos np
      cd /netpos/
      sudo chown pos:netpos icr3rd
-   * Download and copy  __pa__ to __/opt/np/__
-   * Download and copy  __rf14-0-1__ to __/opt/netpos/icr3rd/__
+   * Download and untar  __pa__ to __/opt/np/__
+   * Download and untar  __rf14-0-1__ to __/opt/netpos/icr3rd/__
+   
 7. Install Postgres as root user
    * yum install postgresql.x86_64  postgresql-server postgresql-contrib  libnsl.x86_64
    * systemctl enable postgresql
