@@ -66,12 +66,12 @@
    * bin/paCentralSetup.php -j paCentral.json <br>
  __run pa instance that automatically runs with a script using systemd__
    * As a __root user__ create __paservice.sh__ script in __/usr/local/sbin/__ with following lines
-     ~~~~~
-      #!/bin/sh
-      sudo su - pos -c "cd /opt/np/pa/releases/pa1-0-0/;bin/pa.sh start > /dev/null 2>&1"
+       ~~~~
+       #!/bin/sh
+       sudo su - pos -c "cd /opt/np/pa/releases/pa1-0-0/;bin/pa.sh start > /dev/null 2>&1"
 
    * As a __root user__ create a service named __pa.service__ in __/etc/systemd/system/__ with the following lines
-     ~~~~
+      ~~~~
       [Unit]
       Description=pa service
 
