@@ -142,5 +142,5 @@
           gsettings set org.gnome.desktop.notifications show-banners true
 13. Disable auto lock screen : 
        * As a __root__ user to __disable__ run the command
-        ~~~
+         ~~~
           gsettings set org.gnome.desktop.lockdown disable-lock-screen true
