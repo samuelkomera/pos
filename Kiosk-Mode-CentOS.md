@@ -14,8 +14,8 @@
       sudo groupadd netpos
       usermod -aG netpos pos
       usermod -aG netpos kiosk
-3. Add Users To sudoers file so it wouldn’t get prompted for passwords all the time.Run __visudo__ and at the bottom add
-       ~~~
+3. Add Users To sudoers file so it wouldn’t get prompted for passwords all the time.Run __visudo__ and at the bottom add.
+     ~~~
        pos ALL=(ALL) NOPASSWD: ALL
        kiosk ALL=(ALL) NOPASSWD: ALL
 4. Setup Auto Login. Now we can setup the auto login process. We need the user Kiosk to auto login on every reboot. 
