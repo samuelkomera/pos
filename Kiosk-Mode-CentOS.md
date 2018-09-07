@@ -52,21 +52,21 @@
 
     ** The following steps are made by referring to pa/install/README.md.<br>
 
-      __Create a static configuration.__
+    1. __Create a static configuration.__
       * bin/paSetupConf.sh 100 PTqCPtHEt8Y388aFxS3eiNpCZSIeLu9YDsCOVku5gOM 9101
       * bin/paCreateDb.sh 9101 <br>
 
-      __Create a software instance__
+    2.  __Create a software instance__
       * cp install/pa.ini
       * install/mkpa.php <br>
 
-      __Setup txserver access__
+    3. __Setup txserver access__
       * cd releases/pa1-0-0
       * cp ../../install/conf/paCentral.json .
       * vi paCentral.json                (set password)
       * bin/paCentralSetup.php -j paCentral.json <br>
 
-      __Run pa instance that automatically runs at boot with a script using systemd__
+    4. __Run pa instance that automatically runs at boot with a script using systemd__
       * As a __root user__ create __paservice.sh__ script in __/usr/local/sbin/__ with following lines
          ~~~~
           #!/bin/sh
