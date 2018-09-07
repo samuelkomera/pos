@@ -140,5 +140,4 @@
        * As a __root__ user to __enable__ run the command
          ~~~
           gsettings set org.gnome.desktop.notifications show-banners true
-         
-         
+13.           
