@@ -21,33 +21,33 @@
     pos ALL=(ALL) NOPASSWD: ALL
     kiosk ALL=(ALL) NOPASSWD: ALL
 4. Setup Auto Login. Now we can setup the auto login process. We need the user Kiosk to auto login on every reboot. 
- * edit the following lines to the file __/etc/gdm/custom.conf__
-  ~~~~~ 
-    # Enable automatic login for user
-    [daemon]
-    AutomaticLogin=kiosk
-    AutomaticLoginEnable=True
-  ~~~~~ 
+   1. edit the following lines to the file __/etc/gdm/custom.conf__
+     ~~~~~ 
+       # Enable automatic login for user
+       [daemon]
+       AutomaticLogin=kiosk
+       AutomaticLoginEnable=True
+     ~~~~~ 
 5. Create folders and copy pa project
- * Create a folder __np__ in __opt__ directory.
- * Create a folder __/netpos/icr3rd__ in __opt__ directory.
- * Change the owner and group of __np__ and __icr3rd__ folder. Run following commands. 
-   ~~~
-   cd /opt/
-   sudo chown pos:netpos np
-   cd /netpos/
-   sudo chown pos:netpos icr3rd
- * Download and untar  __pa__ to __/opt/np/__
- * Download and untar  __rf14-0-1__ to __/opt/netpos/icr3rd/__
+    1. Create a folder __np__ in __opt__ directory.
+    2. Create a folder __/netpos/icr3rd__ in __opt__ directory.
+    3. Change the owner and group of __np__ and __icr3rd__ folder. Run following commands. 
+         ~~~
+         cd /opt/
+         sudo chown pos:netpos np
+         cd /netpos/
+      sudo chown pos:netpos icr3rd
+    4. Download and untar  __pa__ to __/opt/np/__
+    5. Download and untar  __rf14-0-1__ to __/opt/netpos/icr3rd/__
    
 6. Install Postgres as root user
- * yum install postgresql.x86_64  postgresql-server postgresql-contrib  libnsl.x86_64
- * systemctl enable postgresql
- * sudo postgresql-setup initdb 
- * yum install epel-release
- * yum install php-mcrypt
- * yum install libnghttp2
- * yum install libpsl
+    1. yum install postgresql.x86_64  postgresql-server postgresql-contrib  libnsl.x86_64
+    2. systemctl enable postgresql
+    3. sudo postgresql-setup initdb 
+    4. yum install epel-release
+    5. yum install php-mcrypt
+    6. yum install libnghttp2
+    7. yum install libpsl
  * systemctl start postgresql
 7. Setup PA instance as __pos user__
  * cd /opt/np/pa/
