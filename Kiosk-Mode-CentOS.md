@@ -2,20 +2,20 @@
 
 1. sudo yum update && sudo yum upgrade
 2. Create User Accounts
- * Create 2 users. One user is already created -- the account you’re logged in as. For this we’ll assume the account name        is __pos__. Create a second user named __kiosk__. This will become the auto-logged in user.<br>
+   * Create 2 users. One user is already created -- the account you’re logged in as. For this we’ll assume the account name        is __pos__. Create a second user named __kiosk__. This will become the auto-logged in user.<br>
 
-   As a __root user__ run the following commands:
-   ~~~
-   adduser kiosk
-   passwd kiosk
-   ~~~  
- * Create a group named __netpos__,and the 2 users i.e,pos and kiosk to the netpos group.<br>
+      As a __root user__ run the following commands:
+      ~~~
+      adduser kiosk
+      passwd kiosk
+      ~~~  
+   * Create a group named __netpos__,and the 2 users i.e,pos and kiosk to the netpos group.<br>
 
-   As a __root user__ run the following commands:
-   ~~~
-   sudo groupadd netpos
-   usermod -aG netpos pos
-   usermod -aG netpos kiosk
+      As a __root user__ run the following commands:
+      ~~~
+      sudo groupadd netpos
+      usermod -aG netpos pos
+      usermod -aG netpos kiosk
 3. Add Users To sudoers file so it wouldn’t get prompted for passwords all the time.Run __visudo__ and at the bottom add
     ~~~
     pos ALL=(ALL) NOPASSWD: ALL
