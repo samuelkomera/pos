@@ -134,13 +134,23 @@
         ~~~~
          # dconf update 
 12. Disable (and re-enable) notifications : 
-       * As a __root__ user to __disable__ run the command
-         ~~~
-          gsettings set org.gnome.desktop.notifications show-banners false 
-       * As a __root__ user to __enable__ run the command
-         ~~~
-          gsettings set org.gnome.desktop.notifications show-banners true
+     * As a __root__ user to __disable__ run the command
+       ~~~
+        gsettings set org.gnome.desktop.notifications show-banners false 
+     * As a __root__ user to __enable__ run the command
+       ~~~
+        gsettings set org.gnome.desktop.notifications show-banners true
 13. Disable auto lock screen : 
-       * As a __root__ user to __disable__ run the command
-         ~~~
-          gsettings set org.gnome.desktop.lockdown disable-lock-screen true
+     * As a __root__ user to __disable__ run the command
+       ~~~
+        gsettings set org.gnome.desktop.lockdown disable-lock-screen true
+14. Enabling Screensaver when the device is idle
+     * Install xscreensaver - run the following command  
+        ~~~
+         sudo yum install xscreen-saver xscreensaver-data xscreensaver-data-extra
+     *  * As a __kiosk user__ create a desktop file named __xscreensaver.desktop__ at __~/.config/autostart/__ 
+      ~~~~~
+      [Desktop Entry]
+      Type=Application
+      Exec=/usr/bin/xscreensaver -nosplash
+      Name=Google-Chrome     
