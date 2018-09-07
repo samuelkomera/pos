@@ -114,12 +114,12 @@
          ~~~
           # dconf update
 11. LOCKING DOWN USER LOGOUT : as a __root__ user
-     * Create the key file __/etc/dconf/db/local.d/00-logout__ to provide information for the local database:
+   * Create the key file __/etc/dconf/db/local.d/00-logout__ to provide information for the local database:
        ~~~~
         [org/gnome/desktop/lockdown]
         # Prevent the user from user switching
         disable-log-out=true
-     * Override the user's setting and prevent the user from changing it in __/etc/dconf/db/local.d/locks/lockdown__:
+   * Override the user's setting and prevent the user from changing it in __/etc/dconf/db/local.d/locks/lockdown__:
        ~~~~
         # Lock this key to disable user logout
         /org/gnome/desktop/lockdown/disable-log-out
@@ -127,8 +127,8 @@
        ~~~~
         # dconf update
 12. LOCKING DOWN USER SWITCHING : As a __root__ user    .
-    * Create the key file __/etc/dconf/db/local.d/00-user-switching__ to provide information for the local database:
-     ~~~~
+   * Create the key file __/etc/dconf/db/local.d/00-user-switching__ to provide information for the local database:
+    ~~~~
         [org/gnome/desktop/lockdown]
         # Prevent the user from user switching
         disable-user-switching=true
