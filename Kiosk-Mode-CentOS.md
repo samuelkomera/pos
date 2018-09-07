@@ -92,12 +92,12 @@
         sudo systemctl start myfirst
         sudo systemctl enable myfirst        
 9. Autostart Application for Kiosk user
-     * As a __kiosk user__ create a desktop file named __google-autostart.desktop__ at __~/.config/autostart/__ 
-        ~~~~~
-        [Desktop Entry]
-        Type=Application
-        Exec=/usr/bin/google-chrome --password-store=basic --kiosk https://localhost:9101
-        Name=Google-Chrome
+  * As a __kiosk user__ create a desktop file named __google-autostart.desktop__ at __~/.config/autostart/__ 
+    ~~~~~
+    [Desktop Entry]
+    Type=Application
+    Exec=/usr/bin/google-chrome --password-store=basic --kiosk https://localhost:9101
+    Name=Google-Chrome
         
 10. DISABLING COMMAND-LINE ACCESS : as a __root__ user
   * Create the directory __/etc/dconf/db/local.d/__ if it does not already exist.
