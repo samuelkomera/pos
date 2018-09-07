@@ -21,7 +21,7 @@
     pos ALL=(ALL) NOPASSWD: ALL
     kiosk ALL=(ALL) NOPASSWD: ALL
 4. Setup Auto Login. Now we can setup the auto login process. We need the user Kiosk to auto login on every reboot. 
-   1. edit the following lines to the file __/etc/gdm/custom.conf__
+   1. Edit the following lines to the file __/etc/gdm/custom.conf__
      ~~~~~ 
        # Enable automatic login for user
        [daemon]
@@ -36,7 +36,7 @@
          cd /opt/
          sudo chown pos:netpos np
          cd /netpos/
-      sudo chown pos:netpos icr3rd
+         sudo chown pos:netpos icr3rd
     4. Download and untar  __pa__ to __/opt/np/__
     5. Download and untar  __rf14-0-1__ to __/opt/netpos/icr3rd/__
    
@@ -48,7 +48,7 @@
     5. yum install php-mcrypt
     6. yum install libnghttp2
     7. yum install libpsl
- * systemctl start postgresql
+    8.systemctl start postgresql
 7. Setup PA instance as __pos user__
  * cd /opt/np/pa/
  * install/setup.sh /opt/np/tools
@@ -97,8 +97,7 @@
     [Desktop Entry]
     Type=Application
     Exec=/usr/bin/google-chrome --password-store=basic --kiosk https://localhost:9101
-    Name=Google-Chrome
-        
+    Name=Google-Chrome   
 9. DISABLING COMMAND-LINE ACCESS : as a __root__ user
  * Create the directory __/etc/dconf/db/local.d/__ if it does not already exist.
  * Create a local database for machine-wide settings in /etc/dconf/db/local.d/00-lockdown:
