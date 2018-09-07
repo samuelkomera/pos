@@ -99,7 +99,8 @@
         Exec=/usr/bin/google-chrome --password-store=basic --kiosk https://localhost:9101
         Name=Google-Chrome
         
-10. DISABLING COMMAND-LINE ACCESS- As a __Root user__
+10. DISABLING COMMAND-LINE ACCESS : as a __root__ user
+     * Create the directory __/etc/dconf/db/local.d/__ if it does not already exist.
      * Create a local database for machine-wide settings in /etc/dconf/db/local.d/00-lockdown:
         ~~~~~~~~
         [org/gnome/desktop/lockdown]
@@ -112,14 +113,7 @@
      * Update the system databases:
          ~~~
           # dconf update
- 11. LOCKING DOWN USER LOGOUT AND USER SWITCHING 
-     * Create the __/etc/dconf/profile/user__ profile which contains the following lines:
-       ~~~~
-        user-db:user
-        system-db:local
-       ~~~~ 
-        local is the name of a dconf database.
-     * Create the directory __/etc/dconf/db/local.d/__ if it does not already exist.
+11. LOCKING DOWN USER LOGOUT : as a __root__ user
      * Create the key file __/etc/dconf/db/local.d/00-logout__ to provide information for the local database:
        ~~~~
         [org/gnome/desktop/lockdown]
@@ -132,4 +126,16 @@
      * Update the system databases:
        ~~~~
         # dconf update
-    
+12. LOCKING DOWN USER SWITCHING : As a __root__ user    .
+    * Create the key file __/etc/dconf/db/local.d/00-user-switching__ to provide information for the local database:
+     ~~~~
+        [org/gnome/desktop/lockdown]
+        # Prevent the user from user switching
+        disable-user-switching=true
+   * Override the user's setting and prevent the user from changing it in __/etc/dconf/db/local.d/locks/lockdown__:
+     ~~~~
+        # Lock this key to disable user switching
+        /org/gnome/desktop/lockdown/disable-user-switching
+   * Update the system databases:
+     ~~~~
+        # dconf update 
