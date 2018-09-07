@@ -148,9 +148,9 @@
      * Install xscreensaver - run the following command  
         ~~~
          sudo yum install xscreen-saver xscreensaver-data xscreensaver-data-extra
-     *  * As a __kiosk user__ create a desktop file named __xscreensaver.desktop__ at __~/.config/autostart/__ 
-      ~~~~~
-      [Desktop Entry]
-      Type=Application
-      Exec=/usr/bin/xscreensaver -nosplash
-      Name=Google-Chrome     
+     * As a __kiosk user__ create a desktop file named __xscreensaver.desktop__ at __~/.config/autostart/__ 
+        ~~~~~
+        [Desktop Entry]
+        Type=Application
+        Exec=/usr/bin/xscreensaver -nosplash
+        Name=Google-Chrome     
