@@ -40,7 +40,7 @@
    * Download and untar  __pa__ to __/opt/np/__
    * Download and untar  __rf14-0-1__ to __/opt/netpos/icr3rd/__
    
-7. Install Postgres as root user
+6. Install Postgres as root user
    * yum install postgresql.x86_64  postgresql-server postgresql-contrib  libnsl.x86_64
    * systemctl enable postgresql
    * sudo postgresql-setup initdb 
@@ -49,7 +49,7 @@
    * yum install libnghttp2
    * yum install libpsl
    * systemctl start postgresql
-8. Setup PA instance as __pos user__
+7. Setup PA instance as __pos user__
    * cd /opt/np/pa/
    * install/setup.sh /opt/np/tools
   
@@ -91,7 +91,7 @@
         ~~~~~
         sudo systemctl start myfirst
         sudo systemctl enable myfirst        
-9. Autostart Application for Kiosk user
+8. Autostart Application for Kiosk user
   * As a __kiosk user__ create a desktop file named __google-autostart.desktop__ at __~/.config/autostart/__ 
     ~~~~~
     [Desktop Entry]
@@ -99,7 +99,7 @@
     Exec=/usr/bin/google-chrome --password-store=basic --kiosk https://localhost:9101
     Name=Google-Chrome
         
-10. DISABLING COMMAND-LINE ACCESS : as a __root__ user
+9. DISABLING COMMAND-LINE ACCESS : as a __root__ user
   * Create the directory __/etc/dconf/db/local.d/__ if it does not already exist.
   * Create a local database for machine-wide settings in /etc/dconf/db/local.d/00-lockdown:
         ~~~~~~~~
@@ -113,7 +113,7 @@
   * Update the system databases:
          ~~~
           # dconf update
-11. LOCKING DOWN USER LOGOUT : as a __root__ user
+10. LOCKING DOWN USER LOGOUT : as a __root__ user
   * Create the key file __/etc/dconf/db/local.d/00-logout__ to provide information for the local database:
        ~~~~
         [org/gnome/desktop/lockdown]
@@ -126,7 +126,7 @@
      * Update the system databases:
        ~~~~
         # dconf update
-12. LOCKING DOWN USER SWITCHING : As a __root__ user    .
+11. LOCKING DOWN USER SWITCHING : As a __root__ user    .
   * Create the key file __/etc/dconf/db/local.d/00-user-switching__ to provide information for the local database:
     ~~~~
         [org/gnome/desktop/lockdown]
