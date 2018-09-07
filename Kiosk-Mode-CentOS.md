@@ -133,3 +133,12 @@
     * Update the system databases:
         ~~~~
          # dconf update 
+12. Disable (and re-enable) notifications : 
+       * As a __root__ user to __disable__ run the command
+         ~~~
+          gsettings set org.gnome.desktop.notifications show-banners false 
+       * As a __root__ user to __enable__ run the command
+         ~~~
+          gsettings set org.gnome.desktop.notifications show-banners true
+         
+         
