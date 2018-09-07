@@ -50,11 +50,10 @@
     * cd /opt/np/pa/
     * install/setup.sh /opt/np/tools
 
-    ** The following steps are made by referring to pa/install/README.md.<br>
-
+    ** The following steps are made by referring to pa/install/README.md.
     1. __Create a static configuration.__
       * bin/paSetupConf.sh 100 PTqCPtHEt8Y388aFxS3eiNpCZSIeLu9YDsCOVku5gOM 9101
-      * bin/paCreateDb.sh 9101 <br>
+      * bin/paCreateDb.sh 9101
 
     2.  __Create a software instance__
       * cp install/pa.ini
@@ -64,7 +63,7 @@
       * cd releases/pa1-0-0
       * cp ../../install/conf/paCentral.json .
       * vi paCentral.json                (set password)
-      * bin/paCentralSetup.php -j paCentral.json <br>
+      * bin/paCentralSetup.php -j paCentral.json 
 
     4. __Run pa instance that automatically runs at boot with a script using systemd__
       * As a __root user__ create __paservice.sh__ script in __/usr/local/sbin/__ with following lines
