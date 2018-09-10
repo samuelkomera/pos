@@ -162,4 +162,36 @@
         Exec=/usr/bin/google-chrome --password-store=basic --kiosk https://localhost:9101
         Name=Google-Chrome   
 
-16.      
+16. Lauch Gnome Applications from ipa Application
+      1. In order to launch the gnome application as __pos__ user in __kiosk__ session need to run the xhost +.
+      2. As a __kiosk__ user write a script named __xhostScript.sh__ in __home/kiosk/__ 
+          ~~~
+          xhost + >> /dev/null 2>&1
+          ~~~
+          and run the script in  __.bashrc__
+          ~~~
+          /home/kiosk/xhostScript.sh
+          ~~~
+        
+      3. As __pos__ user to launch Network Manager write script named network.sh in __/opt/np/pa/htdocs/__
+          ~~~
+          #!/bin/sh
+          export DISPLAY=:0.0;
+          /usr/bin/nm-connection-editor;
+      4. To execute the script from php page on button click run the following 
+        ~~~
+          <?php
+               if(isset($_POST['network'])){
+                    shell_exec("/opt/np/pa/htdocs/network.sh");
+                }
+                 if(isset($_POST['print'])){
+                    shell_exec("/opt/np/pa/htdocs/printCenter.sh");
+                }
+
+            ?>
+       5. Repeat steps 3 and 4 for diffrent gnome applications by changing the executable line.            
+
+
+          
+
+     
