@@ -92,7 +92,10 @@
        ~~~
         sudo yum install gnome-tweak-tool
      * Launch and navigate to the 'Extensions' tab and download extensions __Disable Gestures__ and __Custom Hot Corners__.
-     * Switch the downloaded extensions.       
+     * Switch the downloaded extensions.  
+12. Disable annoying automatic onscreen keyboard gnome
+     * comment the executable line in __/usr/share/dbus-1/services/org.gnome.Caribou.Daemon.service__
+       
 12. Create folders and copy pa project
     * Create a folder __np__ in __opt__ directory.
     * Create a folder __/netpos/icr3rd__ in __opt__ directory.
@@ -195,8 +198,3 @@
           </form>
   
        5. Follow steps 3 and 4 to run other gnome applications.            
-
-
-          
-
-     
