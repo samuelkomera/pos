@@ -154,3 +154,10 @@
         Type=Application
         Exec=/usr/bin/xscreensaver -nosplash
         Name=Google-Chrome     
+15. Disabling Hot Corners and Touch screen Guestures.
+     * Install gnome-tweak-tools 
+       ~~~
+        sudo yum install gnome-tweak-tool
+     * Launch and navigate to the 'Extensions' tab and download extensions __Disable Gestures__ and __Custom Hot Corners__.
+     * Switch the downloaded extensions.
+16.      
