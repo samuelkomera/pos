@@ -86,6 +86,7 @@
         Type=Application
         Exec=/usr/bin/xscreensaver -nosplash
         Name=Google-Chrome     
+     * Launch Screensaver set Mode : Only one Screen Saver    
 11. Disabling Hot Corners and Touch screen Guestures.
      * Install gnome-tweak-tools 
        ~~~
@@ -104,9 +105,9 @@
     * Download and untar  __pa__ to __/opt/np/__
     * Download and untar  __rf14-0-1__ to __/opt/netpos/icr3rd/__
    
-13. Install Postgres as root user
+13. Install Postgres as root user (* Postgres version must be > 10.X )
     * yum install postgresql.x86_64  postgresql-server postgresql-contrib  libnsl.x86_64
-    * systemctl enable postgresql
+    * systemctl enable postgresql 
     * sudo postgresql-setup initdb 
     * yum install epel-release
     * yum install php-mcrypt
