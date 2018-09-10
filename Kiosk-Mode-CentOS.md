@@ -159,7 +159,7 @@
         ~~~~~
         [Desktop Entry]
         Type=Application
-        Exec=/usr/bin/google-chrome --password-store=basic --kiosk https://localhost:9101
+        Exec=/usr/bin/google-chrome --password-store=basic --kiosk --incognito --disable-pinch --overscroll-history-                 navigation=0 https://localhost:9101
         Name=Google-Chrome   
 
 16. Lauch Gnome Applications from ipa Application
