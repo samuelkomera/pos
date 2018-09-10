@@ -194,7 +194,7 @@
              <input type="submit" name="print" value="Print Manager">
           </form>
   
-       5. Repeat steps 3 and 4 for diffrent gnome applications by changing the executable line.            
+       5. Follow steps 3 and 4 to run other gnome applications.            
 
 
           
