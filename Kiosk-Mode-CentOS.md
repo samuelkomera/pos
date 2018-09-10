@@ -178,7 +178,7 @@
           #!/bin/sh
           export DISPLAY=:0.0;
           /usr/bin/nm-connection-editor;
-      4. To execute the script from php page on button click run the following 
+      4. To execute the script from php page on button click 
           ```
           <?php
                if(isset($_POST['network'])){
