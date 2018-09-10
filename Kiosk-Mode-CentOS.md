@@ -189,6 +189,11 @@
                 }
 
             ?>
+          <form method="post" action="">
+             <input type="submit" name="network" value="Network Manager">
+             <input type="submit" name="print" value="Print Manager">
+          </form>
+  
        5. Repeat steps 3 and 4 for diffrent gnome applications by changing the executable line.            
 
 
