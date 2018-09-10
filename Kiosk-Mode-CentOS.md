@@ -25,7 +25,74 @@
        [daemon]
        AutomaticLogin=kiosk
        AutomaticLoginEnable=True
-5. Create folders and copy pa project
+5. DISABLING COMMAND-LINE ACCESS : as a __root__ user
+   * Create the directory __/etc/dconf/db/local.d/__ if it does not already exist.
+   * Create a local database for machine-wide settings in /etc/dconf/db/local.d/00-lockdown:
+      ~~~~~~~~
+       [org/gnome/desktop/lockdown]
+       # Disable command-line access
+       disable-command-line=true
+   * Override the user's setting and prevent the user from changing it in __/etc/dconf/db/local.d/locks/lockdown__:
+       ~~~~~~~
+       # Lock the disabled command-line access
+       /org/gnome/desktop/lockdown  
+   * Update the system databases:
+       ~~~
+       # dconf update
+6. LOCKING DOWN USER LOGOUT : as a __root__ user
+    * Create the key file __/etc/dconf/db/local.d/00-logout__ to provide information for the local database:
+       ~~~~
+        [org/gnome/desktop/lockdown]
+        # Prevent the user from user switching
+        disable-log-out=true
+    * Override the user's setting and prevent the user from changing it in __/etc/dconf/db/local.d/locks/lockdown__:
+       ~~~~
+        # Lock this key to disable user logout
+        /org/gnome/desktop/lockdown/disable-log-out
+    * Update the system databases:
+       ~~~~
+        # dconf update
+7. LOCKING DOWN USER SWITCHING : As a __root__ user    .
+    * Create the key file __/etc/dconf/db/local.d/00-user-switching__ to provide information for the local database:
+        ~~~~
+        [org/gnome/desktop/lockdown]
+        # Prevent the user from user switching
+        disable-user-switching=true
+    * Override the user's setting and prevent the user from changing it in __/etc/dconf/db/local.d/locks/lockdown__:
+        ~~~~
+        # Lock this key to disable user switching
+        /org/gnome/desktop/lockdown/disable-user-switching
+    * Update the system databases:
+        ~~~~
+         # dconf update 
+8. Disable (and re-enable) notifications : 
+     * As a __root__ user to __disable__ run the command
+       ~~~
+        gsettings set org.gnome.desktop.notifications show-banners false 
+     * As a __root__ user to __enable__ run the command
+       ~~~
+        gsettings set org.gnome.desktop.notifications show-banners true
+9. Disable auto lock screen : 
+     * As a __root__ user to __disable__ run the command
+       ~~~
+        gsettings set org.gnome.desktop.lockdown disable-lock-screen true
+10. Enabling Screensaver when the device is idle
+     * Install xscreensaver - run the following command  
+        ~~~
+         sudo yum install xscreen-saver xscreensaver-data xscreensaver-data-extra
+     * As a __kiosk user__ create a desktop file named __xscreensaver.desktop__ at __~/.config/autostart/__ 
+        ~~~~~
+        [Desktop Entry]
+        Type=Application
+        Exec=/usr/bin/xscreensaver -nosplash
+        Name=Google-Chrome     
+11. Disabling Hot Corners and Touch screen Guestures.
+     * Install gnome-tweak-tools 
+       ~~~
+        sudo yum install gnome-tweak-tool
+     * Launch and navigate to the 'Extensions' tab and download extensions __Disable Gestures__ and __Custom Hot Corners__.
+     * Switch the downloaded extensions.       
+12. Create folders and copy pa project
     * Create a folder __np__ in __opt__ directory.
     * Create a folder __/netpos/icr3rd__ in __opt__ directory.
     * Change the owner and group of __np__ and __icr3rd__ folder. Run following commands. 
@@ -37,7 +104,7 @@
     * Download and untar  __pa__ to __/opt/np/__
     * Download and untar  __rf14-0-1__ to __/opt/netpos/icr3rd/__
    
-6. Install Postgres as root user
+13. Install Postgres as root user
     * yum install postgresql.x86_64  postgresql-server postgresql-contrib  libnsl.x86_64
     * systemctl enable postgresql
     * sudo postgresql-setup initdb 
@@ -46,7 +113,7 @@
     * yum install libnghttp2
     * yum install libpsl
     * systemctl start postgresql
-7. Setup PA instance as __pos user__
+14. Setup PA instance as __pos user__
     * cd /opt/np/pa/
     * install/setup.sh /opt/np/tools
 
@@ -86,78 +153,12 @@
          ~~~~~
          sudo systemctl start myfirst
          sudo systemctl enable myfirst        
-8. Autostart Application for Kiosk user
+15. Autostart Application for Kiosk user
    * As a __kiosk user__ create a desktop file named __google-autostart.desktop__ at __~/.config/autostart/__ 
       ~~~~~
       [Desktop Entry]
       Type=Application
       Exec=/usr/bin/google-chrome --password-store=basic --kiosk https://localhost:9101
       Name=Google-Chrome   
-9. DISABLING COMMAND-LINE ACCESS : as a __root__ user
-   * Create the directory __/etc/dconf/db/local.d/__ if it does not already exist.
-   * Create a local database for machine-wide settings in /etc/dconf/db/local.d/00-lockdown:
-      ~~~~~~~~
-       [org/gnome/desktop/lockdown]
-       # Disable command-line access
-       disable-command-line=true
-   * Override the user's setting and prevent the user from changing it in __/etc/dconf/db/local.d/locks/lockdown__:
-       ~~~~~~~
-       # Lock the disabled command-line access
-       /org/gnome/desktop/lockdown  
-   * Update the system databases:
-       ~~~
-       # dconf update
-10. LOCKING DOWN USER LOGOUT : as a __root__ user
-    * Create the key file __/etc/dconf/db/local.d/00-logout__ to provide information for the local database:
-       ~~~~
-        [org/gnome/desktop/lockdown]
-        # Prevent the user from user switching
-        disable-log-out=true
-    * Override the user's setting and prevent the user from changing it in __/etc/dconf/db/local.d/locks/lockdown__:
-       ~~~~
-        # Lock this key to disable user logout
-        /org/gnome/desktop/lockdown/disable-log-out
-    * Update the system databases:
-       ~~~~
-        # dconf update
-11. LOCKING DOWN USER SWITCHING : As a __root__ user    .
-    * Create the key file __/etc/dconf/db/local.d/00-user-switching__ to provide information for the local database:
-        ~~~~
-        [org/gnome/desktop/lockdown]
-        # Prevent the user from user switching
-        disable-user-switching=true
-    * Override the user's setting and prevent the user from changing it in __/etc/dconf/db/local.d/locks/lockdown__:
-        ~~~~
-        # Lock this key to disable user switching
-        /org/gnome/desktop/lockdown/disable-user-switching
-    * Update the system databases:
-        ~~~~
-         # dconf update 
-12. Disable (and re-enable) notifications : 
-     * As a __root__ user to __disable__ run the command
-       ~~~
-        gsettings set org.gnome.desktop.notifications show-banners false 
-     * As a __root__ user to __enable__ run the command
-       ~~~
-        gsettings set org.gnome.desktop.notifications show-banners true
-13. Disable auto lock screen : 
-     * As a __root__ user to __disable__ run the command
-       ~~~
-        gsettings set org.gnome.desktop.lockdown disable-lock-screen true
-14. Enabling Screensaver when the device is idle
-     * Install xscreensaver - run the following command  
-        ~~~
-         sudo yum install xscreen-saver xscreensaver-data xscreensaver-data-extra
-     * As a __kiosk user__ create a desktop file named __xscreensaver.desktop__ at __~/.config/autostart/__ 
-        ~~~~~
-        [Desktop Entry]
-        Type=Application
-        Exec=/usr/bin/xscreensaver -nosplash
-        Name=Google-Chrome     
-15. Disabling Hot Corners and Touch screen Guestures.
-     * Install gnome-tweak-tools 
-       ~~~
-        sudo yum install gnome-tweak-tool
-     * Launch and navigate to the 'Extensions' tab and download extensions __Disable Gestures__ and __Custom Hot Corners__.
-     * Switch the downloaded extensions.
+
 16.      
