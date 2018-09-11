@@ -185,10 +185,10 @@
           ```
           <?php
                if(isset($_POST['network'])){
-                    shell_exec("/opt/np/pa/htdocs/network.sh");
+                    shell_exec("/opt/np/pa/htdocs/gnomeApps.sh print");
                 }
                  if(isset($_POST['print'])){
-                    shell_exec("/opt/np/pa/htdocs/printCenter.sh");
+                    shell_exec("/opt/np/pa/htdocs/gnomeApps.sh network");
                 }
 
             ?>
