@@ -20,51 +20,51 @@
        kiosk ALL=(ALL) NOPASSWD: ALL
 4. Setup Auto Login. Now we can setup the auto login process. We need the user Kiosk to auto login on every reboot. 
    * Edit the following lines to the file __/etc/gdm/custom.conf__
-       ~~~ 
-       # Enable automatic login for user
-       [daemon]
-       AutomaticLogin=kiosk
-       AutomaticLoginEnable=True
+     ~~~ 
+     # Enable automatic login for user
+     [daemon]
+     AutomaticLogin=kiosk
+     AutomaticLoginEnable=True
 5. DISABLING COMMAND-LINE ACCESS : as a __root__ user
    * Create the directory __/etc/dconf/db/local.d/__ if it does not already exist.
    * Create a local database for machine-wide settings in /etc/dconf/db/local.d/00-lockdown:
-      ~~~
-       [org/gnome/desktop/lockdown]
-       # Disable command-line access
-       disable-command-line=true
+     ~~~
+     [org/gnome/desktop/lockdown]
+     # Disable command-line access
+     disable-command-line=true
    * Override the user's setting and prevent the user from changing it in __/etc/dconf/db/local.d/locks/lockdown__:
-       ~~~
-       # Lock the disabled command-line access
-       /org/gnome/desktop/lockdown  
+     ~~~
+     # Lock the disabled command-line access
+     /org/gnome/desktop/lockdown  
    * Update the system databases:
-       ~~~
-       # dconf update
+     ~~~
+     # dconf update
 6. LOCKING DOWN USER LOGOUT : as a __root__ user
-    * Create the key file __/etc/dconf/db/local.d/00-logout__ to provide information for the local database:
-       ~~~
-        [org/gnome/desktop/lockdown]
-        # Prevent the user from user switching
-        disable-log-out=true
-    * Override the user's setting and prevent the user from changing it in __/etc/dconf/db/local.d/locks/lockdown__:
-       ~~~
-        # Lock this key to disable user logout
-        /org/gnome/desktop/lockdown/disable-log-out
-    * Update the system databases:
-       ~~~
-        # dconf update
+   * Create the key file __/etc/dconf/db/local.d/00-logout__ to provide information for the local database:
+     ~~~
+      [org/gnome/desktop/lockdown]
+      # Prevent the user from user switching
+      disable-log-out=true
+   * Override the user's setting and prevent the user from changing it in __/etc/dconf/db/local.d/locks/lockdown__:
+     ~~~
+      # Lock this key to disable user logout
+      /org/gnome/desktop/lockdown/disable-log-out
+   * Update the system databases:
+     ~~~
+      # dconf update
 7. LOCKING DOWN USER SWITCHING : As a __root__ user    .
-    * Create the key file __/etc/dconf/db/local.d/00-user-switching__ to provide information for the local database:
-        ~~~
-        [org/gnome/desktop/lockdown]
-        # Prevent the user from user switching
-        disable-user-switching=true
-    * Override the user's setting and prevent the user from changing it in __/etc/dconf/db/local.d/locks/lockdown__:
-        ~~~
-        # Lock this key to disable user switching
-        /org/gnome/desktop/lockdown/disable-user-switching
-    * Update the system databases:
-        ~~~
-         # dconf update 
+   * Create the key file __/etc/dconf/db/local.d/00-user-switching__ to provide information for the local database:
+     ~~~
+     [org/gnome/desktop/lockdown]
+     # Prevent the user from user switching
+     disable-user-switching=true
+   * Override the user's setting and prevent the user from changing it in __/etc/dconf/db/local.d/locks/lockdown__:
+     ~~~
+     # Lock this key to disable user switching
+     /org/gnome/desktop/lockdown/disable-user-switching
+   * Update the system databases:
+     ~~~
+     # dconf update 
 8. Disable (and re-enable) notifications : 
      * As a __root__ user to __disable__ run the command
        ~~~
