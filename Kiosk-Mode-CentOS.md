@@ -25,6 +25,7 @@
      [daemon]
      AutomaticLogin=kiosk
      AutomaticLoginEnable=True
+     ~~~
 5. DISABLING COMMAND-LINE ACCESS : as a __root__ user
    * Create the directory __/etc/dconf/db/local.d/__ if it does not already exist.
    * Create a local database for machine-wide settings in /etc/dconf/db/local.d/00-lockdown:
