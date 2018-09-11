@@ -33,13 +33,16 @@
      [org/gnome/desktop/lockdown]
      # Disable command-line access
      disable-command-line=true
+     ~~~
    * Override the user's setting and prevent the user from changing it in __/etc/dconf/db/local.d/locks/lockdown__:
      ~~~
      # Lock the disabled command-line access
-     /org/gnome/desktop/lockdown  
+     /org/gnome/desktop/lockdown
+     ~~~
    * Update the system databases:
      ~~~
      # dconf update
+     ~~~
 6. LOCKING DOWN USER LOGOUT : as a __root__ user
    * Create the key file __/etc/dconf/db/local.d/00-logout__ to provide information for the local database:
      ~~~
