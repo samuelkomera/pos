@@ -86,7 +86,12 @@
      * As a __root__ user to __disable__ run the command
        ~~~
         gsettings set org.gnome.desktop.lockdown disable-lock-screen true
-10. Enabling Screensaver when the device is idle
+10. Disable super key (Windows Key)
+     * As a __root__ user to __disable__ run the command
+       ~~~
+        gsettings set org.gnome.mutter overlay-key ""
+       
+11. Enabling Screensaver when the device is idle
      * Install xscreensaver - run the following command  
         ~~~
          sudo yum install xscreen-saver xscreensaver-data xscreensaver-data-extra
@@ -97,16 +102,16 @@
         Exec=/usr/bin/xscreensaver -nosplash
         Name=Google-Chrome     
      * Launch Screensaver set Mode : Only one Screen Saver    
-11. Disabling Hot Corners and Touch screen Guestures.
+12. Disabling Hot Corners and Touch screen Guestures.
      * Install gnome-tweak-tools 
        ~~~
         sudo yum install gnome-tweak-tool
      * Launch and navigate to the 'Extensions' tab and download extensions __Disable Gestures__ and __Custom Hot Corners__.
      * Switch the downloaded extensions.  
-12. Disable annoying automatic onscreen keyboard gnome
+13. Disable annoying automatic onscreen keyboard gnome
      * comment the executable line in __/usr/share/dbus-1/services/org.gnome.Caribou.Daemon.service__
        
-12. Create folders and copy pa project
+14. Create folders and copy pa project
     * Create a folder __np__ in __opt__ directory.
     * Create a folder __/netpos/icr3rd__ in __opt__ directory.
     * Change the owner and group of __np__ and __icr3rd__ folder. Run following commands. 
@@ -118,7 +123,7 @@
     * Download and untar  __pa__ to __/opt/np/__
     * Download and untar  __rf14-0-1__ to __/opt/netpos/icr3rd/__
    
-13. Install Postgres as root user (* Postgres version must be > 10.X )
+15. Install Postgres as root user (* Postgres version must be > 10.X )
     * yum install postgresql.x86_64  postgresql-server postgresql-contrib  libnsl.x86_64
     * systemctl enable postgresql 
     * sudo postgresql-setup initdb 
@@ -127,7 +132,7 @@
     * yum install libnghttp2
     * yum install libpsl
     * systemctl start postgresql
-14. Setup PA instance as __pos user__
+16. Setup PA instance as __pos user__
     * cd /opt/np/pa/
     * install/setup.sh /opt/np/tools
 
@@ -159,15 +164,17 @@
          Description=pa service
 
          [Service]
+         Restart=always
+         RestartSec=120s
          ExecStart=/usr/local/sbin/paservice.sh
 
          [Install]
          WantedBy=multi-user.target
       * Start the service and  enable it to run at boot:
          ~~~~~
-         sudo systemctl start myfirst
-         sudo systemctl enable myfirst        
-15. Autostart Application for Kiosk user
+         sudo systemctl start pa.service
+         sudo systemctl enable pa.service
+17. Autostart Application for Kiosk user
       * As a __kiosk user__ create a desktop file named __google-autostart.desktop__ at __~/.config/autostart/__ 
         ~~~~~
         [Desktop Entry]
@@ -175,7 +182,7 @@
         Exec=/usr/bin/google-chrome --password-store=basic --kiosk --incognito --disable-pinch --overscroll-history-                 navigation=0 https://localhost:9101
         Name=Google-Chrome   
 
-16. Lauch Gnome Applications from ipa Application
+18. Lauch Gnome Applications from ipa Application
       1. In order to launch the gnome application as __pos__ user in __kiosk__ session need to run the xhost +.
       2. As a __kiosk__ user write a script named __xhostScript.sh__ in __home/kiosk/__ 
           ~~~
