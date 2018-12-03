@@ -10,12 +10,12 @@
 | Gift Card Change| Sum of Change of all trans(Gift Card) of all Orders where order status(Complete) |
 | Voucher Change | Sum of Change of all trans(Voucher) of all Orders where order status(Complete) |
 | Mobile Change |Sum of Change of all trans(Mobile) of all Orders where order status(Complete) |
-| Cash PayIn Totals | cashIn |
-| Cash PayOut Totals | cashOut |
+| Cash PayIn Totals | Sum of all payIn's where payment status(Complete) and Type(Cash)|
+| Cash PayOut Totals | Sum of all payOut's Type(Cash) |
 | Cash Due from (Server/Drawer) | cashIn - (accountTipsPaid +giftcardTipsPaid + voucherTipsPaid +mobileTipsPaid + autogratAmt +giftcardChange + voucherChange +mobileChange)|
 | Deposit Amount | moneyOut - moneyIn |
-| Open Cash | Sum of all payIn's where payment status(Complete) and Type(Cash) |
-| Close Cash | Sum of all payOut's Type(Cash) |
+| Open Cash | moneyIn |
+| Close Cash | moneyOut |
 | Over/Short | Deposit - cashDue |
 | __Coupon / Discount Summary__ |
 | Total Discount |  |
