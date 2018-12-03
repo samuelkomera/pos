@@ -1,11 +1,11 @@
 | __Close Report__ | __Day__|
 | ------ | ------ |
 | __Key__ | __Computation__ |
-| Total Payment |  |
-| Cash Total |  |
-| Non Cash Total |  |
-| Non Cash Tips |  |
-| Non Cash Totals w/Tips |  |
+| Total Payment | Sum of all trans of all orders |
+| Cash Total | Sum of all trans of type(cash) of all orders |
+| Non Cash Total | Sum of all trans of type(non-cash) of all orders without tips |
+| Non Cash Tips | Sum of all tips of all trans type(non-cash) of all orders   |
+| Non Cash Totals w/Tips | Non Cash Total + Non Cash Tips  |
 | Auto Gratuity |  |
 | Gift Card Change| Sum of Change of all trans(Gift Card) of all Orders where order status(Complete) |
 | Voucher Change | Sum of Change of all trans(Voucher) of all Orders where order status(Complete) |
