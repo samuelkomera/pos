@@ -7,11 +7,11 @@
 | Non Cash Tips | [plugins/onedrive/README.md][PlOd] |
 | Non Cash Totals w/Tips | [plugins/medium/README.md][PlMe] |
 | Auto Gratuity | [plugins/googleanalytics/README.md][PlGa] |
-| Gift Card Change| [plugins/dropbox/README.md][PlDb] |
-| Voucher Change | [plugins/github/README.md][PlGh] |
-| Mobile Change | [plugins/googledrive/README.md][PlGd] |
-| Cash PayIn Totals | [plugins/onedrive/README.md][PlOd] |
-| Cash PayOut Totals | [plugins/medium/README.md][PlMe] |
+| Gift Card Change| giftcardChange |
+| Voucher Change | voucherChange |
+| Mobile Change | mobileChange |
+| Cash PayIn Totals | cashIn |
+| Cash PayOut Totals | cashOut |
 | Cash Due from (Server/Drawer) | CashIn - (accountTipsPaid +giftcardTipsPaid + voucherTipsPaid +mobileTipsPaid + autogratAmt +giftcardChange + voucherChange +mobileChange)|
 | Deposit Amount | moneyOut - moneyIn |
 | Open Cash | [plugins/github/README.md][PlGh] |
