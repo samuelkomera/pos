@@ -12,17 +12,17 @@
 | Mobile Change | mobileChange |
 | Cash PayIn Totals | cashIn |
 | Cash PayOut Totals | cashOut |
-| Cash Due from (Server/Drawer) | CashIn - (accountTipsPaid +giftcardTipsPaid + voucherTipsPaid +mobileTipsPaid + autogratAmt +giftcardChange + voucherChange +mobileChange)|
+| Cash Due from (Server/Drawer) | cashIn - (accountTipsPaid +giftcardTipsPaid + voucherTipsPaid +mobileTipsPaid + autogratAmt +giftcardChange + voucherChange +mobileChange)|
 | Deposit Amount | moneyOut - moneyIn |
-| Open Cash |  |
-| Close Cash |  |
+| Open Cash | moneyIn |
+| Close Cash | moneyOut |
 | Over/Short | Deposit - cashDue |
 | __Coupon / Discount Summary__ |
 | Total Discount |  |
 | __Pay In/Out Summary__ |
-| Total Pay Ins |  |
-| Total Pay Outs |  |
-| Net PayIn/Outs |  |
+| Total Pay Ins | allIn |
+| Total Pay Outs | allOut |
+| Net PayIn/Outs | TotalPayIns - TotalPayOuts|
 | __Comp / Void Summary__ |
 | Total Comps |  |
 | Total Voids |  |
