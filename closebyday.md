@@ -7,9 +7,9 @@
 | Non Cash Tips |  |
 | Non Cash Totals w/Tips |  |
 | Auto Gratuity |  |
-| Gift Card Change| giftcardChange |
-| Voucher Change | voucherChange |
-| Mobile Change | mobileChange |
+| Gift Card Change| Sum of Change of all trans(Gift Card) of all Orders where order status(Complete) |
+| Voucher Change | Sum of Change of all trans(Voucher) of all Orders where order status(Complete) |
+| Mobile Change |Sum of Change of all trans(Mobile) of all Orders where order status(Complete) |
 | Cash PayIn Totals | cashIn |
 | Cash PayOut Totals | cashOut |
 | Cash Due from (Server/Drawer) | cashIn - (accountTipsPaid +giftcardTipsPaid + voucherTipsPaid +mobileTipsPaid + autogratAmt +giftcardChange + voucherChange +mobileChange)|
