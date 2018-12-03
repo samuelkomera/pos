@@ -12,11 +12,11 @@
 | Mobile Change | [plugins/googledrive/README.md][PlGd] |
 | Cash PayIn Totals | [plugins/onedrive/README.md][PlOd] |
 | Cash PayOut Totals | [plugins/medium/README.md][PlMe] |
-| Cash Due from (Server/Drawer) | [plugins/googleanalytics/README.md][PlGa] |
-| Deposit Amount | [plugins/dropbox/README.md][PlDb] |
+| Cash Due from (Server/Drawer) | CashIn - (accountTipsPaid +giftcardTipsPaid + voucherTipsPaid +mobileTipsPaid + autogratAmt +giftcardChange + voucherChange +mobileChange)|
+| Deposit Amount | moneyOut - moneyIn |
 | Open Cash | [plugins/github/README.md][PlGh] |
 | Close Cash | [plugins/googledrive/README.md][PlGd] |
-| Over/Short | [plugins/onedrive/README.md][PlOd] |
+| Over/Short | Deposit - cashDue |
 | __Coupon / Discount Summary__ |
 | Total Discount | [plugins/medium/README.md][PlMe] |
 | __Pay In/Out Summary__ |
