@@ -1,12 +1,12 @@
 | __Close Report__ | __Day__|
 | ------ | ------ |
 | __Key__ | __Computation__ |
-| Total Payment | [plugins/dropbox/README.md][PlDb] |
-| Cash Total | [plugins/github/README.md][PlGh] |
-| Non Cash Total | [plugins/googledrive/README.md][PlGd] |
-| Non Cash Tips | [plugins/onedrive/README.md][PlOd] |
-| Non Cash Totals w/Tips | [plugins/medium/README.md][PlMe] |
-| Auto Gratuity | [plugins/googleanalytics/README.md][PlGa] |
+| Total Payment |  |
+| Cash Total |  |
+| Non Cash Total |  |
+| Non Cash Tips |  |
+| Non Cash Totals w/Tips |  |
+| Auto Gratuity |  |
 | Gift Card Change| giftcardChange |
 | Voucher Change | voucherChange |
 | Mobile Change | mobileChange |
@@ -14,28 +14,28 @@
 | Cash PayOut Totals | cashOut |
 | Cash Due from (Server/Drawer) | CashIn - (accountTipsPaid +giftcardTipsPaid + voucherTipsPaid +mobileTipsPaid + autogratAmt +giftcardChange + voucherChange +mobileChange)|
 | Deposit Amount | moneyOut - moneyIn |
-| Open Cash | [plugins/github/README.md][PlGh] |
-| Close Cash | [plugins/googledrive/README.md][PlGd] |
+| Open Cash |  |
+| Close Cash |  |
 | Over/Short | Deposit - cashDue |
 | __Coupon / Discount Summary__ |
-| Total Discount | [plugins/medium/README.md][PlMe] |
+| Total Discount |  |
 | __Pay In/Out Summary__ |
-| Total Pay Ins | [plugins/medium/README.md][PlMe] |
-| Total Pay Outs | [plugins/medium/README.md][PlMe] |
-| Net PayIn/Outs | [plugins/medium/README.md][PlMe] |
+| Total Pay Ins |  |
+| Total Pay Outs |  |
+| Net PayIn/Outs |  |
 | __Comp / Void Summary__ |
-| Total Comps | [plugins/medium/README.md][PlMe] |
-| Total Voids | [plugins/medium/README.md][PlMe] |
+| Total Comps |  |
+| Total Voids |  |
 | __Sales Reconciliation__ |
-| Net Sales | [plugins/medium/README.md][PlMe] |
-| Other Sales | [plugins/medium/README.md][PlMe] |
-| Taxes | [plugins/medium/README.md][PlMe] |
-| Gross Sales | [plugins/medium/README.md][PlMe] |
-| Guest Count | [plugins/medium/README.md][PlMe] |
-| Guest Average | [plugins/medium/README.md][PlMe] |
+| Net Sales | |
+| Other Sales | |
+| Taxes |  |
+| Gross Sales |  |
+| Guest Count |  |
+| Guest Average |  |
 | __Grouping Category Summary__ |
-| Total  | [plugins/medium/README.md][PlMe] |
+| Total  |  |
 | __Closing Summary__ |
-| Credit Cards w/Tips| [plugins/medium/README.md][PlMe] |
-| Cash Due (From Server/Drawer) | [plugins/medium/README.md][PlMe] |
-| Grand Total | [plugins/medium/README.md][PlMe] |
+| Credit Cards w/Tips|  |
+| Cash Due (From Server/Drawer) | |
+| Grand Total | |
