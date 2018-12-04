@@ -2,12 +2,15 @@
 | ------ | ------ |
 | __Key__ | __Computation__ |
 | __Payment Summary__ |
-| Total Pay Ins | Sum of all payIns's where payment status(Complete) |
-| Total Pay Outs | Sum of all payOut's|
-| Net PayIn/Outs | Total Pay Ins - Total Pay Outs|
+| Payment |  |
+| Sales | |
+| Tip | |
+| Total | Sales + Tip |
 | __Payment Detail__ |
-| Total Comps | sum of all pcompc of items of all orders |
-| Total Voids | sum of all pnetc of items of all orders  |
+| Payment |  |
+| Sales | |
+| Tip | |
+| Total | Sales + Tip |
 | __Server Banking Payment Reconcilation__ |
 | Sales Revenue | GCDue + AccountDue + sum of trans type (CC) + sum of trans(voucher) + sum of trans type(cash) + Discount |
 | Non Cash Total | Sum of all trans of type(non-cash) of all orders without tips |
