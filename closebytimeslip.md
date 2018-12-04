@@ -1,6 +1,6 @@
 | __Close Report__ | __Timeslip__|
 | ------ | ------ |
-| __Key__ | __Computation__ |
+| __Key__ | __Computation value__ |
 | __Payment Summary__ |
 | Payment |  |
 | Sales | |
