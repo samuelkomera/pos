@@ -8,6 +8,7 @@
 | __Payment Detail__ |
 | Total Comps | sum of all pcompc of items of all orders |
 | Total Voids | sum of all pnetc of items of all orders  |
+| __Server Banking Payment Reconcilation__ |
 | Sales Revenue | GCDue + AccountDue + sum of trans type (CC) + sum of trans(voucher) + sum of trans type(cash) + Discount |
 | Non Cash Total | Sum of all trans of type(non-cash) of all orders without tips |
 | Cash Total | Sum of all trans of type(cash) of all orders |
