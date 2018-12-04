@@ -2,14 +2,14 @@
 | ------ | ------ |
 | __Key__ | __Computation value__ |
 | __Payment Summary__ |
-| Payment |  |
-| Sales | |
-| Tip | |
+| Payment | sum of quantity of trans  and type of trans  |
+| Sales | sum of total trans by type with status(complete) |
+| Tip | sum of total tips of all transactions by type with status(complete) |
 | Total | Sales + Tip |
 | __Payment Detail__ |
-| Payment |  |
-| Sales | |
-| Tip | |
+| Payment | Type of trans and order Id |
+| Sales | Trans by type with status(complete) |
+| Tip | Tip for each trans of an order  |
 | Total | Sales + Tip |
 | __Server Banking Payment Reconcilation__ |
 | Sales Revenue | GCDue + AccountDue + sum of trans type (CC) + sum of trans(voucher) + sum of trans type(cash) + Discount |
