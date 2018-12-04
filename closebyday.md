@@ -24,15 +24,15 @@
 | Total Pay Outs | Sum of all payOut's|
 | Net PayIn/Outs | Total Pay Ins - Total Pay Outs|
 | __Comp / Void Summary__ |
-| Total Comps |  |
-| Total Voids |  |
+| Total Comps | sum of all pcompc of items of all orders |
+| Total Voids | sum of all pnetc of items of all orders  |
 | __Sales Reconciliation__ |
-| Net Sales | |
-| Other Sales | |
-| Taxes |  |
-| Gross Sales |  |
-| Guest Count |  |
-| Guest Average |  |
+| Net Sales | sum of all pnetc of items of all orders |
+| Other Sales | sum of all gcnet of items of all orders 
+| Taxes | sum of all check taxTotals |
+| Gross Sales | Net Sales + Other Sales + Taxes |
+| Guest Count | sum of count of guests of all orders |
+| Guest Average | GrossSales/GuestCount |
 | __Grouping Category Summary__ |
 | Total  |  |
 | __Closing Summary__ |
