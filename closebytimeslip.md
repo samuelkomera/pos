@@ -1,7 +1,7 @@
 | __Close Report__ | __Timeslip__|
 | ------ | ------ |
 | __Key__ | __Computation__ |
-| __Payment Summary_ |
+| __Payment Summary__ |
 | Total Pay Ins | Sum of all payIns's where payment status(Complete) |
 | Total Pay Outs | Sum of all payOut's|
 | Net PayIn/Outs | Total Pay Ins - Total Pay Outs|
