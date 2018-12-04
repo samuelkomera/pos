@@ -49,6 +49,6 @@
 | Total  | sum of all trans by catId|
 | __Closing Summary__ |
 | Credit Cards w/Tips| sums of all trans of type(credit card) |
-| Voucher| |
+| Voucher| sums of all trans of type(voucher) |
 | Cash Due (From Server/Drawer) |cashIn - (accountTipsPaid +giftcardTipsPaid + voucherTipsPaid +mobileTipsPaid + autogratAmt +giftcardChange + voucherChange +mobileChange) |
 | Grand Total | CashDue + Non Cash Totals w/Tips |
