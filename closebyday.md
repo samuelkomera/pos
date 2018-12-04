@@ -37,5 +37,6 @@
 | Total  |  |
 | __Closing Summary__ |
 | Credit Cards w/Tips|  |
-| Cash Due (From Server/Drawer) | |
-| Grand Total | |
+| Cash Due (From Server/Drawer) |cashIn - (accountTipsPaid +giftcardTipsPaid + voucherTipsPaid +mobileTipsPaid + autogratAmt +giftcardChange + voucherChange +mobileChange)|
+| Deposit Amount | moneyOut - moneyIn|
+| Grand Total | CashDue + Non Cash Totals w/Tips |
