@@ -16,7 +16,7 @@
 | Deposit Amount | moneyOut - moneyIn |
 | Open Cash | moneyIn |
 | Close Cash | moneyOut |
-| Over/Short | Deposit - cashDue |
+| Over/Short | DepositAmount-cashDue |
 | __Coupon / Discount Summary__ |
 | Total Discount | Sum of all discounts applied by type(discount) for all orders|
 | __Pay In/Out Summary__ |
