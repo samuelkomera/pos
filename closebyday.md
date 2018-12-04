@@ -18,11 +18,11 @@
 | Close Cash | moneyOut |
 | Over/Short | Deposit - cashDue |
 | __Coupon / Discount Summary__ |
-| Total Discount |  |
+| Total Discount | Sum of all discounts applied by type(discount) for all orders|
 | __Pay In/Out Summary__ |
 | Total Pay Ins | Sum of all payIns's where payment status(Complete) |
 | Total Pay Outs | Sum of all payOut's|
-| Net PayIn/Outs | Total Pay ns - Total Pay Outs|
+| Net PayIn/Outs | Total Pay Ins - Total Pay Outs|
 | __Comp / Void Summary__ |
 | Total Comps |  |
 | Total Voids |  |
