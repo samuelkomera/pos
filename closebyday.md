@@ -34,9 +34,8 @@
 | Guest Count | sum of count of guests of all orders |
 | Guest Average | GrossSales/GuestCount |
 | __Grouping Category Summary__ |
-| Total  |  |
+| Total  | sum of all trans by catId|
 | __Closing Summary__ |
-| Credit Cards w/Tips|  |
-| Cash Due (From Server/Drawer) |cashIn - (accountTipsPaid +giftcardTipsPaid + voucherTipsPaid +mobileTipsPaid + autogratAmt +giftcardChange + voucherChange +mobileChange)|
-| Deposit Amount | moneyOut - moneyIn|
+| Credit Cards w/Tips| sums of all trans of type(credit card) |
+| Cash Due (From Server/Drawer) |cashIn - (accountTipsPaid +giftcardTipsPaid + voucherTipsPaid +mobileTipsPaid + autogratAmt +giftcardChange + voucherChange +mobileChange) |
 | Grand Total | CashDue + Non Cash Totals w/Tips |
