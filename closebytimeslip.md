@@ -7,8 +7,7 @@
 | Cash PayIn Totals | Sum of all payIn's where payment status(Complete) and Type(Cash)|
 | Cash PayOut Totals | Sum of all payOut's Type(Cash) |
 | Change| |
-| Gross Cash| 
-|
+| Gross Cash| |
 | Auto Gratuity |  |
 | Gift Card Change| Sum of Change of all trans(Gift Card) of all Orders where order status(Complete) |
 | Voucher Change | Sum of Change of all trans(Voucher) of all Orders where order status(Complete) |
