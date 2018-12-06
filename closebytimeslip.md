@@ -1,4 +1,4 @@
-| __Close Report__ | __Timeslip__|
+| __Close Report__ | __Timeslip(based on primary->head timeslipId)__|
 | ------ | ------ |
 | __Key__ | __Computation value__ |
 | __Payment Summary__ |
