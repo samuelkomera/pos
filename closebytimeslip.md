@@ -17,7 +17,6 @@
 | Cash Total | Sum of all trans of type(cash) of all orders |
 | Cash PayIn Totals | Sum of all payIn's where payment status(Complete) and Type(Cash)|
 | Cash PayOut Totals | Sum of all payOut's Type(Cash) |
-| Change| |
 | Gross Cash| Sum of all trans of type(Cash) + Cash PayIn Totals - Cash Payout Totals|
 | Auto Gratuity | Sum of all the autograt amt of all the checks |
 | Gift Card Change| Sum of Change of all trans(Gift Card) of all Orders where order status(Complete) |
