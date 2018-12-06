@@ -19,7 +19,7 @@
 | Cash PayOut Totals | Sum of all payOut's Type(Cash) |
 | Change| |
 | Gross Cash| Sum of all trans of type(Cash) + Cash PayIn Totals - Cash Payout Totals|
-| Auto Gratuity |  |
+| Auto Gratuity | Sum of all the autograt amt of all the checks |
 | Gift Card Change| Sum of Change of all trans(Gift Card) of all Orders where order status(Complete) |
 | Voucher Change | Sum of Change of all trans(Voucher) of all Orders where order status(Complete) |
 | Mobile Change |Sum of Change of all trans(Mobile) of all Orders where order status(Complete) |
@@ -44,7 +44,7 @@
 | Gross Sales | Net Sales + Other Sales + Taxes |
 | Guest Count | sum of count of guests of all orders |
 | Guest Average | GrossSales/GuestCount |
-| Bar Mix| |
+| Bar Mix| Percentage based on the sales of menuCats actual related to rule|
 | __Grouping Category Summary__ |
 | Total  | sum of all trans by catId|
 | __Closing Summary__ |
