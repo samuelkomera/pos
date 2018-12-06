@@ -6,7 +6,7 @@
 | Non Cash Total | Sum of all trans of type(non-cash) of all orders without tips |
 | Non Cash Tips | Sum of all tips of all trans type(non-cash) of all orders   |
 | Non Cash Totals w/Tips | Non Cash Total + Non Cash Tips  |
-| Auto Gratuity |  |
+| Auto Gratuity | Sum of all the autograt amt of all the checks |
 | Gift Card Change| Sum of Change of all trans(Gift Card) of all Orders where order status(Complete) |
 | Voucher Change | Sum of Change of all trans(Voucher) of all Orders where order status(Complete) |
 | Mobile Change |Sum of Change of all trans(Mobile) of all Orders where order status(Complete) |
