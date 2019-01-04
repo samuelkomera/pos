@@ -169,8 +169,6 @@
          Description=pa service
 
          [Service]
-         Restart=always
-         RestartSec=120s
          ExecStart=/usr/local/sbin/paservice.sh
 
          [Install]
@@ -184,7 +182,7 @@
         ~~~~~
         [Desktop Entry]
         Type=Application
-        Exec=/usr/bin/google-chrome --password-store=basic --kiosk --incognito --disable-pinch --overscroll-history-      navigation=0 https://localhost:9101/ui/
+        Exec=/usr/bin/google-chrome --password-store=basic --kiosk --incognito --disable-pinch --overscroll-history-      navigation=0 --app=https://localhost:9101/ui/
         Name=Google-Chrome   
 
 19. Lauch Gnome Applications from ipa Application
